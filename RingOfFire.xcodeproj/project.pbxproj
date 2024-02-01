@@ -14,6 +14,9 @@
 		FCFE5A842B6C31EC00CAA7D0 /* RingOfFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A832B6C31EC00CAA7D0 /* RingOfFireTests.swift */; };
 		FCFE5A8E2B6C31EC00CAA7D0 /* RingOfFireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A8D2B6C31EC00CAA7D0 /* RingOfFireUITests.swift */; };
 		FCFE5A902B6C31EC00CAA7D0 /* RingOfFireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A8F2B6C31EC00CAA7D0 /* RingOfFireUITestsLaunchTests.swift */; };
+		FCFE5A9E2B6C323000CAA7D0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A9D2B6C323000CAA7D0 /* Player.swift */; };
+		FCFE5AA12B6C3DB800CAA7D0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5AA02B6C3DB800CAA7D0 /* GameView.swift */; };
+		FCFE5AA32B6C457D00CAA7D0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5AA22B6C457D00CAA7D0 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FCFE5A892B6C31EC00CAA7D0 /* RingOfFireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RingOfFireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFE5A8D2B6C31EC00CAA7D0 /* RingOfFireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingOfFireUITests.swift; sourceTree = "<group>"; };
 		FCFE5A8F2B6C31EC00CAA7D0 /* RingOfFireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingOfFireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCFE5A9D2B6C323000CAA7D0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FCFE5AA02B6C3DB800CAA7D0 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		FCFE5AA22B6C457D00CAA7D0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		FCFE5A712B6C31EB00CAA7D0 /* RingOfFire */ = {
 			isa = PBXGroup;
 			children = (
+				FCFE5A9F2B6C3D9A00CAA7D0 /* Views */,
+				FCFE5A9C2B6C321B00CAA7D0 /* Models */,
 				FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */,
-				FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */,
 				FCFE5A762B6C31EC00CAA7D0 /* Assets.xcassets */,
 				FCFE5A782B6C31EC00CAA7D0 /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				FCFE5A8F2B6C31EC00CAA7D0 /* RingOfFireUITestsLaunchTests.swift */,
 			);
 			path = RingOfFireUITests;
+			sourceTree = "<group>";
+		};
+		FCFE5A9C2B6C321B00CAA7D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCFE5A9D2B6C323000CAA7D0 /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FCFE5A9F2B6C3D9A00CAA7D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */,
+				FCFE5AA02B6C3DB800CAA7D0 /* GameView.swift */,
+				FCFE5AA22B6C457D00CAA7D0 /* CircleImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFE5A752B6C31EB00CAA7D0 /* ContentView.swift in Sources */,
+				FCFE5A9E2B6C323000CAA7D0 /* Player.swift in Sources */,
+				FCFE5AA12B6C3DB800CAA7D0 /* GameView.swift in Sources */,
 				FCFE5A732B6C31EB00CAA7D0 /* RingOfFireApp.swift in Sources */,
+				FCFE5AA32B6C457D00CAA7D0 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
