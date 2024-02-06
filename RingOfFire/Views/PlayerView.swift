@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PlayerView: View {
     @State private var playerName = ""
     @EnvironmentObject var game: Game
     
@@ -98,6 +98,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game()
-        ContentView().environmentObject(game)
+        PlayerView().environmentObject(game)
     }
 }
