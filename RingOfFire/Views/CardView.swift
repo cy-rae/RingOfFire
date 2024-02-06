@@ -20,24 +20,25 @@ struct CardView: View {
             RoundedRectangle(cornerRadius: 10)
                 .fill(background)
                 .shadow(color: Color.gray, radius: 11)
-
+            
             // Your card content goes here
             VStack {
                 HStack{
                     VStack {
                         Text(card.value)
-                            .font(.largeTitle)
+                            .font(.system(size: 28))
                             .bold()
                             .foregroundColor(getColor())
                         
-                            SymbolView(symbol: card.symbol)
+                        SymbolView(symbol: card.symbol)
+                            .font(.largeTitle)
                     }.padding()
                     
                     Spacer()
                 }
                 
                 Spacer()
-
+                
                 Text(card.description)
                     .font(.title)
                     .italic()
@@ -45,20 +46,21 @@ struct CardView: View {
                 
                 Spacer()
                 
-                    HStack{
-                        Spacer()
+                HStack{
+                    Spacer()
+                    
+                    VStack {
+                        SymbolView(symbol: card.symbol)
+                            .font(.system(size: 28))
+                            .rotationEffect(.degrees(180))
                         
-                        VStack {
-                            SymbolView(symbol: card.symbol)
-                                .rotationEffect(.degrees(180))
-                            
-                            Text(card.value)
-                                .font(.largeTitle)
-                                .bold()
-                                .foregroundColor(getColor())
-                                .rotationEffect(.degrees(180))
-                        }.padding()
-                    }
+                        Text(card.value)
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(getColor())
+                            .rotationEffect(.degrees(180))
+                    }.padding()
+                }
             }
         }
         .offset(x: offset.width, y: offset.height * 0.4)
@@ -88,7 +90,7 @@ struct CardView: View {
         case -500...(-150):
             offset = CGSize(width: -500, height: 0)
             onSwiped()
-        case 500...(150):
+        case 150...500:
             offset = CGSize(width: 500, height: 0)
             onSwiped()
         default:
@@ -105,6 +107,6 @@ struct CardView_Previews: PreviewProvider {
         CardView(card: card) {
             print("Swiped")
         }
-            .frame(width: 350, height: 200)
+        .frame(width: 350, height: 340)
     }
 }

@@ -16,19 +16,15 @@ struct SymbolView: View {
         switch(symbol){
         case .CLUB:
             Image(systemName: "suit.spade.fill")
-                .font(.largeTitle)
                 .foregroundColor(getColor())
         case .SPADE:
             Image(systemName: "suit.club.fill")
-                .font(.largeTitle)
                 .foregroundColor(getColor())
         case .DIAMOND:
             Image(systemName: "diamond.fill")
-                .font(.largeTitle)
                 .foregroundColor(getColor())
         case .HEART:
             Image(systemName: "heart.fill")
-                .font(.largeTitle)
                 .foregroundColor(getColor())
         }
     }
@@ -45,6 +41,7 @@ struct SymbolView: View {
 
 struct SymbolView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolView(symbol: Symbol.CLUB)
+        SymbolView(symbol: Symbol.DIAMOND)
+            .font(.largeTitle)
     }
 }

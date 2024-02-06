@@ -15,7 +15,7 @@ struct PlayerView: View {
         NavigationStack {
             VStack {
                 // ICON
-                CircleImage(height: 250, width: 250)
+                CircleImage(height: 200, width: 200)
                     .padding(.top)
                 
                 // PLAYERS LIST
@@ -53,12 +53,17 @@ struct PlayerView: View {
                     Label("Start drinking", systemImage: "wineglass.fill")
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(game.players.isEmpty)
+                .disabled(game.players.count < 2)
                 
             }
-            .navigationDestination(isPresented: $game.gameStarted) {
-                if(!game.players.isEmpty) {
+            .navigationDestination(isPresented: $game.started) {
+                if(game.players.count >= 2 && !game.gameOver) {
                     GameView().environmentObject(game)
+                }
+                if(game.gameOver) {
+                    GameOverView(onRestart: {
+                        game.reset()
+                    })
                 }
             }
         }
@@ -91,12 +96,12 @@ struct PlayerView: View {
      Start the game by navigating to the game view. Game will not start if array is empty.
      */
     func startGame() {
-        game.gameStarted = true
+        game.started = true
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+    static var previews: some View {        
         let game = Game()
         PlayerView().environmentObject(game)
     }

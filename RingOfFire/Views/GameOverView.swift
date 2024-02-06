@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct GameOverView: View {
+    var onRestart: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            SymbolView(symbol: Symbol.CLUB)
+            SymbolView(symbol: Symbol.HEART)
+            SymbolView(symbol: Symbol.SPADE)
+            SymbolView(symbol: Symbol.DIAMOND)
+        }.padding()
+
+        Text("Game Over")
+            .font(.largeTitle)
+            .onDisappear {
+                onRestart()
+            }
+        
+        HStack {
+            SymbolView(symbol: Symbol.DIAMOND).rotationEffect(.degrees(180))
+            SymbolView(symbol: Symbol.SPADE).rotationEffect(.degrees(180))
+            SymbolView(symbol: Symbol.HEART).rotationEffect(.degrees(180))
+            SymbolView(symbol: Symbol.CLUB).rotationEffect(.degrees(180))
+        }.padding()
     }
 }
 
 #Preview {
-    GameOverView()
+    GameOverView(onRestart: {print("onRestart")})
 }

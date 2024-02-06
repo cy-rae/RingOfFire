@@ -13,8 +13,9 @@
 		FCAA56EE2B71942E008A2A3E /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56ED2B71942E008A2A3E /* Symbol.swift */; };
 		FCAA56F32B71A801008A2A3E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56F22B71A801008A2A3E /* Test.swift */; };
 		FCAA56F52B71B30E008A2A3E /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56F42B71B30E008A2A3E /* SymbolView.swift */; };
+		FCE462D02B72C0F400491087 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE462CF2B72C0F400491087 /* GameOverView.swift */; };
 		FCFE5A732B6C31EB00CAA7D0 /* RingOfFireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */; };
-		FCFE5A752B6C31EB00CAA7D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */; };
+		FCFE5A752B6C31EB00CAA7D0 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A742B6C31EB00CAA7D0 /* PlayerView.swift */; };
 		FCFE5A772B6C31EC00CAA7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFE5A762B6C31EC00CAA7D0 /* Assets.xcassets */; };
 		FCFE5A7A2B6C31EC00CAA7D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFE5A792B6C31EC00CAA7D0 /* Preview Assets.xcassets */; };
 		FCFE5A842B6C31EC00CAA7D0 /* RingOfFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A832B6C31EC00CAA7D0 /* RingOfFireTests.swift */; };
@@ -49,9 +50,10 @@
 		FCAA56ED2B71942E008A2A3E /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		FCAA56F22B71A801008A2A3E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		FCAA56F42B71B30E008A2A3E /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
+		FCE462CF2B72C0F400491087 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		FCFE5A6F2B6C31EB00CAA7D0 /* RingOfFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingOfFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingOfFireApp.swift; sourceTree = "<group>"; };
-		FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FCFE5A742B6C31EB00CAA7D0 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FCFE5A762B6C31EC00CAA7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFE5A792B6C31EC00CAA7D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCFE5A7F2B6C31EC00CAA7D0 /* RingOfFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RingOfFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,12 +178,13 @@
 		FCFE5A9F2B6C3D9A00CAA7D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */,
+				FCFE5A742B6C31EB00CAA7D0 /* PlayerView.swift */,
 				FCFE5AA02B6C3DB800CAA7D0 /* GameView.swift */,
 				FCFE5AA22B6C457D00CAA7D0 /* CircleImage.swift */,
 				FCAA56E92B718FD8008A2A3E /* CardView.swift */,
 				FCAA56F22B71A801008A2A3E /* Test.swift */,
 				FCAA56F42B71B30E008A2A3E /* SymbolView.swift */,
+				FCE462CF2B72C0F400491087 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCAA56EA2B718FD8008A2A3E /* CardView.swift in Sources */,
-				FCFE5A752B6C31EB00CAA7D0 /* ContentView.swift in Sources */,
+				FCFE5A752B6C31EB00CAA7D0 /* PlayerView.swift in Sources */,
 				FCAA56E82B718027008A2A3E /* Game.swift in Sources */,
 				FCAA56F52B71B30E008A2A3E /* SymbolView.swift in Sources */,
 				FCFE5A9E2B6C323000CAA7D0 /* Player.swift in Sources */,
@@ -326,6 +329,7 @@
 				FCFE5A732B6C31EB00CAA7D0 /* RingOfFireApp.swift in Sources */,
 				FCAA56F32B71A801008A2A3E /* Test.swift in Sources */,
 				FCFE5AA32B6C457D00CAA7D0 /* CircleImage.swift in Sources */,
+				FCE462D02B72C0F400491087 /* GameOverView.swift in Sources */,
 				FCAA56EC2B7193BA008A2A3E /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +502,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +532,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

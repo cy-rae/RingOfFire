@@ -35,12 +35,14 @@ struct GameView: View {
                     
                     ZStack{
                         ForEach(game.cards.indices, id: \.self) { index in
-                            CardView(card: game.cards[index]) {
-                                iterate()
+                            if index == game.cards.count - 1 - game.iteration {
+                                CardView(card: game.cards[index]) {
+                                    iterate()
+                                }
+                                .offset(x: 0, y: 0)
+                                .font(.title)
+                                .frame(width: 350, height: 340)
                             }
-                            .offset(x: 0, y: 0)
-                            .font(.title)
-                            .frame(width: 350, height: 250)
                         }
                     }
                 }
@@ -50,10 +52,25 @@ struct GameView: View {
             
             Spacer()
         }
+        .onAppear {
+            updateQuestionMaster()
+        }
     }
     
     func iterate() {
-        game.iteration = game.iteration + 1;
+        if game.iteration == game.cards.count-1 {
+            game.gameOver = true
+        } else {
+            game.iteration = game.iteration + 1;
+            updateQuestionMaster()
+        }
+    }
+    
+    func updateQuestionMaster() {
+        let index = game.cards.count - 1 - game.iteration
+        if game.cards[index].value == "Q" {
+            game.questionMaster = game.players[game.iteration % game.players.count]
+        }
     }
 }
 
@@ -64,12 +81,7 @@ struct GameView_Previews: PreviewProvider {
         let player3 = Player(name: "Dario")
         let players: [Player] = [player1, player2, player3]
         
-        let card1 = Card(symbol: Symbol.CLUB, value: "A", description: "Fluss")
-        let card2 = Card(symbol: Symbol.HEART, value: "J", description: "Regel")
-        let card3 = Card(symbol: Symbol.SPADE, value: "8", description: "Eight is mate")
-        let cards = [card1, card2, card3]
-        
-        let game = Game(players: players, cards: cards, questionMaster: player2)
+        let game = Game(players: players, started: true)
         
         GameView().environmentObject(game)
     }
