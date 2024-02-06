@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCAA56E82B718027008A2A3E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56E72B718027008A2A3E /* Game.swift */; };
+		FCAA56EA2B718FD8008A2A3E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56E92B718FD8008A2A3E /* CardView.swift */; };
+		FCAA56EC2B7193BA008A2A3E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56EB2B7193BA008A2A3E /* Card.swift */; };
+		FCAA56EE2B71942E008A2A3E /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56ED2B71942E008A2A3E /* Symbol.swift */; };
+		FCAA56F32B71A801008A2A3E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56F22B71A801008A2A3E /* Test.swift */; };
+		FCAA56F52B71B30E008A2A3E /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA56F42B71B30E008A2A3E /* SymbolView.swift */; };
 		FCFE5A732B6C31EB00CAA7D0 /* RingOfFireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */; };
 		FCFE5A752B6C31EB00CAA7D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */; };
 		FCFE5A772B6C31EC00CAA7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFE5A762B6C31EC00CAA7D0 /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FCAA56E72B718027008A2A3E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FCAA56E92B718FD8008A2A3E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FCAA56EB2B7193BA008A2A3E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FCAA56ED2B71942E008A2A3E /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		FCAA56F22B71A801008A2A3E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		FCAA56F42B71B30E008A2A3E /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 		FCFE5A6F2B6C31EB00CAA7D0 /* RingOfFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingOfFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingOfFireApp.swift; sourceTree = "<group>"; };
 		FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCAA56E62B717FF9008A2A3E /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				FCAA56E72B718027008A2A3E /* Game.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		FCAA56F02B71943E008A2A3E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				FCAA56ED2B71942E008A2A3E /* Symbol.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		FCFE5A662B6C31EB00CAA7D0 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +128,8 @@
 		FCFE5A712B6C31EB00CAA7D0 /* RingOfFire */ = {
 			isa = PBXGroup;
 			children = (
+				FCAA56F02B71943E008A2A3E /* Enums */,
+				FCAA56E62B717FF9008A2A3E /* Observables */,
 				FCFE5A9F2B6C3D9A00CAA7D0 /* Views */,
 				FCFE5A9C2B6C321B00CAA7D0 /* Models */,
 				FCFE5A722B6C31EB00CAA7D0 /* RingOfFireApp.swift */,
@@ -138,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFE5A9D2B6C323000CAA7D0 /* Player.swift */,
+				FCAA56EB2B7193BA008A2A3E /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +179,9 @@
 				FCFE5A742B6C31EB00CAA7D0 /* ContentView.swift */,
 				FCFE5AA02B6C3DB800CAA7D0 /* GameView.swift */,
 				FCFE5AA22B6C457D00CAA7D0 /* CircleImage.swift */,
+				FCAA56E92B718FD8008A2A3E /* CardView.swift */,
+				FCAA56F22B71A801008A2A3E /* Test.swift */,
+				FCAA56F42B71B30E008A2A3E /* SymbolView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,11 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAA56EA2B718FD8008A2A3E /* CardView.swift in Sources */,
 				FCFE5A752B6C31EB00CAA7D0 /* ContentView.swift in Sources */,
+				FCAA56E82B718027008A2A3E /* Game.swift in Sources */,
+				FCAA56F52B71B30E008A2A3E /* SymbolView.swift in Sources */,
 				FCFE5A9E2B6C323000CAA7D0 /* Player.swift in Sources */,
 				FCFE5AA12B6C3DB800CAA7D0 /* GameView.swift in Sources */,
+				FCAA56EE2B71942E008A2A3E /* Symbol.swift in Sources */,
 				FCFE5A732B6C31EB00CAA7D0 /* RingOfFireApp.swift in Sources */,
+				FCAA56F32B71A801008A2A3E /* Test.swift in Sources */,
 				FCFE5AA32B6C457D00CAA7D0 /* CircleImage.swift in Sources */,
+				FCAA56EC2B7193BA008A2A3E /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

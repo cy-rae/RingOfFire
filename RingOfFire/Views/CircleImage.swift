@@ -17,10 +17,7 @@ struct CircleImage: View {
             .aspectRatio(contentMode: .fill)
             .frame(width: width, height: height)
             .clipShape(Circle())
-            .overlay {
-                Circle().stroke(.gray, lineWidth: 1)
-            }
-            .shadow(radius: 10)
+            .shadow(color: Color.gray, radius: 11)
     }
 }
 

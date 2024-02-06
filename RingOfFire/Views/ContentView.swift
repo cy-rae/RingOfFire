@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var playerName = ""
-    @State private var players: [Player] = []
-    @State private var gameStarted = false
+    @EnvironmentObject var game: Game
     
     var body: some View {
         NavigationStack {
@@ -24,7 +23,7 @@ struct ContentView: View {
                     Text("Players")
                         .font(.title)
                     List {
-                        ForEach(players) { player in
+                        ForEach(game.players) { player in
                             Text(player.name)
                         }
                         .onDelete(perform: deletePlayer)
@@ -54,12 +53,14 @@ struct ContentView: View {
                     Label("Start drinking", systemImage: "wineglass.fill")
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(players.isEmpty)
+                .disabled(game.players.isEmpty)
                 
             }
-            .navigationDestination(isPresented: $gameStarted) {
-                GameView(players: players, iteration: 0)
-           }
+            .navigationDestination(isPresented: $game.gameStarted) {
+                if(!game.players.isEmpty) {
+                    GameView().environmentObject(game)
+                }
+            }
         }
         .padding()
     }
@@ -73,7 +74,7 @@ struct ContentView: View {
         
         // Add new player to array
         let newPlayer = Player(name: playerName)
-        players.append(newPlayer)
+        game.players.append(newPlayer)
         
         // Reset text field
         playerName = ""
@@ -83,19 +84,20 @@ struct ContentView: View {
      Remove the swiped player from array.
      */
     func deletePlayer(at offsets: IndexSet) {
-        players.remove(atOffsets: offsets)
+        game.players.remove(atOffsets: offsets)
     }
     
     /**
      Start the game by navigating to the game view. Game will not start if array is empty.
      */
     func startGame() {
-        gameStarted = true
+        game.gameStarted = true
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = Game()
+        ContentView().environmentObject(game)
     }
 }

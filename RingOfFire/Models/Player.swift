@@ -8,13 +8,11 @@
 import Foundation
 
 struct Player: Identifiable {
-    var id = UUID()
-    
+    var id: UUID
     var name: String
-    var questionMaster: Bool
     
     init(name: String) {
+        self.id = UUID()
         self.name = name
-        self.questionMaster = false
     }
 }

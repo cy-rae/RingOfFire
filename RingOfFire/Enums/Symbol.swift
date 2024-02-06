@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum Symbol {
+    case SPADE
+    case CLUB
+    case HEART
+    case DIAMOND
+}
